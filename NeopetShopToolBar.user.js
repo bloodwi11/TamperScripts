@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NeopetShopToolBar
 // @namespace    http://powerblocks.net/
-// @version      0.1
+// @version      0.2
 // @description  Making things easier!
 // @author       bloodwi11
 // @include      http://www.neopets.com/*
