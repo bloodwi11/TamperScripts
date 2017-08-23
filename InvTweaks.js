@@ -18,9 +18,9 @@ if(document.URL.indexOf("inventory") != -1) {
         itemname = getName($nametd);
         rarity = getRarity($nametd);
         if (k % 2 === 0) {
-            list += '<tr style="background-color: #ADEAEA;">' + itemBuilder(image, itemname, rarity) + '</tr>';
+            list += '<tr style="background-color: #F0F0F0;">' + itemBuilder(image, itemname, rarity, v) + '</tr>';
         } else {
-            list += '<tr style="background-color: #33CCCC;">' + itemBuilder(image, itemname, rarity) + '</tr>';
+            list += '<tr style="background-color: #FFFFFF;">' + itemBuilder(image, itemname, rarity, v) + '</tr>';
         }
     });
     list += '</table>';
@@ -44,6 +44,7 @@ function getRarity(nametd) {
     return nametd.find(".medText").text();
 }
 
-function itemBuilder(image, name, rarity) {
-    return  '<td><img border="1" style="border-color: #F4A549; background-color: #FFFFFF; width: ' + imageWidth + 'px; height: ' + imageHeight+ 'px;" src="' + image + '" /></td><td>' + name + '</td><td>' + rarity + '</td>';
+function itemBuilder(image, name, rarity, v) {
+    link = '<a href="' + $(v).parent().attr("href") + '" onclick="' + $(v).parent().attr("onclick") + '" title="' + v.title + '">';
+    return  '<td>' + link + '<img border="1" style="border-color: #F4A549; background-color: #FFFFFF; width: ' + imageWidth + 'px; height: ' + imageHeight+ 'px;" src="' + image + '"/></a></td><td>'+ link + name + '</a></td><td style="color: ' +  $(v).parent().parent().find(".medText").children().css("color") + ';">' + rarity + '</td>';
 }
