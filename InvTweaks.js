@@ -45,5 +45,5 @@ function getRarity(nametd) {
 }
 
 function itemBuilder(image, name, rarity) {
-    return  '<td><img style="width: ' + imageWidth + 'px; height: ' + imageHeight+ 'px;" src="' + image + '" /></td><td>' + name + '</td><td>' + rarity + '</td>';
+    return  '<td><img border="1" style="border-color: #F4A549; background-color: #FFFFFF; width: ' + imageWidth + 'px; height: ' + imageHeight+ 'px;" src="' + image + '" /></td><td>' + name + '</td><td>' + rarity + '</td>';
 }
